@@ -1,0 +1,396 @@
+
+@font-face {
+  font-family: 'MsMadi';
+  src: url('../Resources/MsMadi-Regular.ttf');
+}
+
+/* General styling */
+* {
+  box-sizing: border-box;
+  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+
+  color: white;
+}
+
+html {
+  background-image: url('../Resources/LP_by_Travis_Yewell.jpg');
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+body {
+  display: flex; 
+  
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+
+  width: 1100px;
+
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+/* Login link, logout button */
+a {
+  text-align: center;
+
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+#logout {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+
+  background-color: rgba(38, 38, 38, 0.6);
+
+  font-size: 14px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.5);
+}
+
+#logout:hover {
+  background-color: rgba(38, 38, 38, 0.7);
+}
+
+
+
+/* Welcome message */
+h2 {
+  position: fixed;
+  top: 5px;
+  left: 100px;
+
+  font-size: 18px;
+
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1)
+}
+
+/* I am jammming to */
+.Slogan{
+  width: 370px;
+}
+
+.Slogan>span {
+  font-family: 'MsMadi';
+  font-size: 60px;
+  margin-right: 5px;
+}
+
+/* Searchbar and Results */
+.Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.SearchContainer{
+  display: flex;
+  align-items: baseline;
+
+  position: relative;
+  top: -25px;
+
+  height: 65px;
+  width: 100%;
+}
+
+
+#searchbar{
+  display: flex;
+
+  background-color: rgba(38, 38, 38, 0);
+  color: beige;
+
+  font-size: 60px;
+  font-weight: bold;
+
+  width: 600px;
+  max-height: 90px;
+  padding: 12px;
+  
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+}
+
+#searchbar:focus{
+  border: none;
+}
+
+::placeholder{
+  color: beige;
+}
+
+.SearchResults {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 50%;
+  height: 500px;
+}
+
+.Result{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+  margin: 10px;
+
+  background-color: rgba(38, 38, 38, 0.3);
+  backdrop-filter: blur(4px);
+
+  border: 1px solid rgb (0, 0, 0);
+  border-radius: 15px;
+
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.5);
+}
+
+
+.Result .titles p{
+  margin: 4px 4px 4px 10px;
+}
+
+.Result .titles{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-height: 80px;
+}
+
+.Result>img {
+  height: 80px;
+  object-fit: cover;
+}
+
+.Add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(38, 38, 38, 0.4);
+
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+
+  width: 50px;
+  height: 30px;
+
+  margin-right: 15px;
+
+  border: none;
+  border-radius: 10px;
+}
+
+.Add:hover{
+  background-color: rgba(38, 38, 38, 0.6);
+  cursor: pointer;
+}
+
+
+
+/* Playlist elements Styling */
+#PlaylistName {
+  background-color: rgba(38, 38, 38, 0);  
+  color: beige;
+
+  font-size: 22px;
+  font-weight: bold;
+  
+  margin: 3px 0px 5px 7px;
+
+  border: none;
+  text-shadow: 1px 1px 2px rgb(46, 37, 32);
+}
+
+#PlaylistName:focus {
+  outline: none;
+}
+
+.PlaylistContainer {
+  margin: 10px;
+  padding: 10px;
+  
+  width: 50%;
+
+  border-radius: 15px;
+}
+
+.newPlaylist{
+  display: flex; 
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+
+
+.PlaylistContainer p {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+}
+
+.playlistSong{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+}
+
+.playlistSong .titles {
+  display: flex;
+  flex-direction: column;
+
+  margin: 7px;
+}
+
+.PlaylistContainer .titles p{
+  margin: 3px;
+  width: 100%;
+}
+
+.playlistSong {
+  width: 100%;
+}
+
+.playlistSong:last-of-type{
+  border:none;
+}
+
+
+
+
+
+
+
+/* Remove Button */
+
+.RemoveSong{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.15);
+
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+
+  width: 40px;
+  height: 30px;
+
+  margin-right: 15px;
+
+  border: none;
+  border-radius: 10px;
+}
+
+.RemoveSong:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+
+
+/* Save Button */
+.SavePlaylist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  padding: 10px;
+  margin-right: 12px;
+
+  width: 50px;
+  height: 40px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.SavePlaylist:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* SaveResult & Errormessage */
+.SaveResult {
+  background-color: rgba(38, 38, 38, 0.3);
+  backdrop-filter: blur(4px);
+
+  position: relative;
+  top: 200px;
+
+  padding: 15px;
+  margin: 0 auto;
+  width: 250px;
+  text-align: center;
+
+  border-radius: 15px;
+}
+
+.Error {
+    background-color: rgba(38, 38, 38, 0.3);
+    backdrop-filter: blur(4px);
+  
+    position: relative;
+    top: 200px;
+  
+    padding: 17px;
+    margin: 0 auto;
+    width: 280px;
+    text-align: center;
+  
+    border-radius: 15px;
+}
+
+
+/* Spinner */
+.Spinner {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #6b6b6b; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
